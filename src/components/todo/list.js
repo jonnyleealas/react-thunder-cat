@@ -5,14 +5,17 @@ import {PaginatedList} from 'react-paginated-list';
 //npm i react-paginated-list and npm i styled-components? Not sure about this ask joe
 import {If, Else, Then} from 'react-if';
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 function ToastList(){
+=======
+function List(){
+>>>>>>> 111249678ca32712edc118f267dd7ddbf253d3f0
     return(
         <>
-          <Toast>
+        <Toast>
             <Toast.Header>
             <Badge pill variant="success">Success</Badge>{' '}
-               
                 <strong className="mr-auto">Bootstrap</strong>
                 <small>11 mins ago</small>
 =======
@@ -61,4 +64,4 @@ function List(props){
   )
 }
 
-export default ToastList;
+export default List;
