@@ -1,6 +1,7 @@
 import React from 'react'
-import Header from './components/header/header'
-import MainForm from './components/todo/form'
+import Header from './components/header/header.js'
+import MainForm from './components/todo/form.js'
+import ToastList from './components/todo/list.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <MainForm />
+      <ToastList />
     </div>
   );
 }
