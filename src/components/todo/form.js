@@ -20,11 +20,11 @@ function MainForm(){
             </Form.Group>
             
             <Form>
-  <Form.Group controlId="formBasicRange">
-    <Form.Label>Range</Form.Label>
-    <Form.Control type="range" />
-  </Form.Group>
-</Form>
+            <Form.Group controlId="formBasicRange">
+                <Form.Label>Range</Form.Label>
+                <Form.Control type="range" />
+            </Form.Group>
+            </Form>
             <Button variant="primary" type="submit">
                 Submit
             </Button>
