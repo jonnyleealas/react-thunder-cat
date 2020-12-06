@@ -5,10 +5,9 @@ import Badge from 'react-bootstrap/Badge'
 function ToastList(){
     return(
         <>
-          <Toast>
+        <Toast>
             <Toast.Header>
             <Badge pill variant="success">Success</Badge>{' '}
-               
                 <strong className="mr-auto">Bootstrap</strong>
                 <small>11 mins ago</small>
             </Toast.Header>
