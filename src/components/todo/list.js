@@ -5,6 +5,7 @@ import {PaginatedList} from 'react-paginated-list';
 //npm i react-paginated-list and npm i styled-components? Not sure about this ask joe
 import {If, Else, Then} from 'react-if';
 
+<<<<<<< Updated upstream
 function ToastList(){
     return(
         <>
