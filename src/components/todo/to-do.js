@@ -9,6 +9,8 @@ function ToDo(){
     useEffect( () =>{
        getAll() 
     },[])
+
+
     async function getAll(){
    try{
        let results = await axios({
@@ -16,9 +18,24 @@ function ToDo(){
            method: 'get',
            url: 'https://api-js401.herokuapp.com/api/v1/todo'
        });
-   } catch(err){
-       console.log(err)
-   }
+       setItemList(results.data.results)
+        } catch(err){
+            console.log(err)
+        }
+    };
+    
+    async function makePost(item){
+        try{
+        let results = await axios({
+            method: 'post',
+            url: 'https://api-js401.herokuapp.com/api/v1/todo',
+            data: item
+        }); 
+        console.log('POST RESULTS***********', results)
+        }catch (e){
+            console.log(e);
+        }
+
     };
 
 
@@ -30,7 +47,7 @@ function ToDo(){
     return(
         <>
 
-        <MainForm updateList={updateList} />
+        <MainForm updateList={updateList} makePost={makePost}/>
         <List />
         </>
     )

@@ -6,23 +6,28 @@ import Button from 'react-bootstrap/Button'
 
 
 
-function MainForm(){
+function MainForm(props){
 
-    const [itemObject, setItemObject] = useState({})
+    function callToForm(object){
+        props.makePost(object)
+    }
+
+    const [item, setItem] = useState({})
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        console.log(itemObject)
+        callToForm(item)
+        console.log('handle submit item logging',item)
         e.target.reset()
     }
 
     const handleChange = (e) =>{
-    setItemObject({...itemObject, [e.target.name]: e.target.value})
-    console.log(itemObject)
+    setItem({...item, [e.target.name]: e.target.value})
+    console.log(item)
     }
 
     useEffect(()=>{
-    setItemObject({...itemObject, difficulty : 3, complete : false })
+    setItem({...item, difficulty : 3, complete : false })
     }, [])
 
     return(

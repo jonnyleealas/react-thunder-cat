@@ -2,7 +2,7 @@ import React from 'react'
 import Toast from 'react-bootstrap/Toast'
 import Badge from 'react-bootstrap/Badge'
 
-function ToastList(){
+function List(){
     return(
         <>
         <Toast>
@@ -17,4 +17,4 @@ function ToastList(){
     )
 }
 
-export default ToastList;
+export default List;
