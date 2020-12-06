@@ -6,11 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header />
+<<<<<<< Updated upstream
       <MainForm />
       <ToastList />
     </div>
+=======
+      <ToDo />
+    </>
+>>>>>>> Stashed changes
   );
 }
 
