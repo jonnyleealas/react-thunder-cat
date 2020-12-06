@@ -22,7 +22,7 @@ function MainForm(){
     }
 
     useEffect(()=>{
-    setItemObject({...itemObject, difficulty : 3})
+    setItemObject({...itemObject, difficulty : 3, complete : false })
     }, [])
 
     return(
