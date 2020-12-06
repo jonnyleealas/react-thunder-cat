@@ -21,23 +21,27 @@ function MainForm(){
     console.log(itemObject)
     }
 
+    useEffect(()=>{
+    setItemObject({...itemObject, difficulty : 3})
+    }, [])
+
     return(
         <>
         <Form onSubmit={handleSubmit}>
             <Form.Group controlId="item">
                 <Form.Label>To Do Item</Form.Label>
-                <Form.Control name="text" type="text" onChange={handleChange} placeholder="Add a task..." />
+                <Form.Control name="text" type="text" onChange={handleChange} placeholder="Add a task..." required/>
             </Form.Group>
 
             <Form.Group controlId="assignee">
                 <Form.Label>Assign To:</Form.Label>
-                <Form.Control name="assignee" type="text" onChange={handleChange} placeholder="Assigned To" />
+                <Form.Control name="assignee" type="text" onChange={handleChange} placeholder="Assigned To" required/>
             </Form.Group>
             
             <Form>
             <Form.Group controlId="formBasicRange">
                 <Form.Label>Range</Form.Label>
-                <Form.Control name="difficulty" onChange={handleChange} type="range" min="1" max="5" />
+                <Form.Control name="difficulty" onChange={handleChange} type="range" min="1" max="5" required/>
             </Form.Group>
             </Form>
             <Button variant="primary" type="submit">
