@@ -1,15 +1,18 @@
 import React from 'react'
-import Header from './components/header/header.js'
-import ToDo from './components/todo/to-do'
+import Header from './components/header/header';
 
+import ToDo from './components/to-do/to-do.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SettingsContext from './context/settings/settings-context.js'
 
 function App() {
   return (
-    <div className="App">
-      <Header />
+    <SettingsContext>
+      <Header/>
       <ToDo />
-    </div>
+    
+    </SettingsContext>
+   
   );
 }
 
